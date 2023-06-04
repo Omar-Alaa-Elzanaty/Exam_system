@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <help_text>2-It is the oldest representation method of the knowledge
+2-It is the oldest representation method of the knowledge
+// Uncomment the following line to change the fontsize and font:
+fontsize=20
+// fontfamily=SansSerif //possible: SansSerif,Serif,Monospaced
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+// Welcome to UMLet!
+//
+// Double-click on elements to add them to the diagram, or to copy them
+// Edit elements by modifying the text in this panel
+// Hold Ctrl to select multiple elements
+// Use Ctrl+mouse to select via lasso
+//
+// Use +/- or Ctrl+mouse wheel to zoom
+// Drag a whole relation at its central square icon
+//
+// Press Ctrl+C to copy the whole diagram to the system clipboard (then just paste it to, eg, Word)
+// Edit the files in the "palettes" directory to create your own element palettes
+//
+// Select "Custom Elements &gt; New..." to create new element types
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+
+// This text will be stored with each diagram;  use it for notes.</help_text>
+  <zoom_level>7</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1337</x>
+      <y>371</y>
+      <w>224</w>
+      <h>133</h>
+    </coordinates>
+    <panel_attributes>ExamDb
+-
+-student: DbSet&lt;Student&gt;
+-teacher: DbSet&lt;Teacher&gt;
+-account: DbSet&lt;Account&gt;
+-exam: DbSet&lt;Exam&gt;
+-results: DbSet&lt;result&gt;
+-
++onModelConfig():void
++onModelCreating():void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>413</x>
+      <y>371</y>
+      <w>280</w>
+      <h>189</h>
+    </coordinates>
+    <panel_attributes>Account
+-
+-Id: int
+-name :string
+-userName: string
+-password:string
+-gender:char
+-teacher:Teacher
+-student:Student
+-
+Account(id: int)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>413</x>
+      <y>644</y>
+      <w>280</w>
+      <h>175</h>
+    </coordinates>
+    <panel_attributes>Teacher
+-
+-teacherId:int
+-subject:string
+-accId:int
+-account:Account
+-exams:List&lt;Exam&gt;
+-
++Teacher()
++Teacher(accountId:int)
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>413</x>
+      <y>903</y>
+      <w>280</w>
+      <h>175</h>
+    </coordinates>
+    <panel_attributes>Student
+-
+-studentId:int
+-level: int
+-accId: int
+-account: Account
+-results: List&lt;Result&gt;
+-
++Student()
++Student(accountId: int)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>980</x>
+      <y>868</y>
+      <w>287</w>
+      <h>231</h>
+    </coordinates>
+    <panel_attributes>Exam
+-
+examId: int
+grade: int
+durationInMinute: int
+teacherId: int
+teacher: Teacher
+questions: List&lt;Question&gt;
+results: List&lt;Result&gt;
+-
++Exam(questionNumbers: int,teacherId: int)
++runningExam():double</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>980</x>
+      <y>364</y>
+      <w>294</w>
+      <h>175</h>
+    </coordinates>
+    <panel_attributes>Result
+-
+-sId: int
+-student: Student
+-examId: int
+-exam: Exam
+-result: double
+-
++updateStudentResult():bool</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>973</x>
+      <y>588</y>
+      <w>294</w>
+      <h>252</h>
+    </coordinates>
+    <panel_attributes>Question
+-
+-questionId: int
+-question: string
+-answer: string
+-choicA: string
+-choicB: string
+-choicC: string
+-choicD: string
+-examId: int
+-exam: Exam
+-
++checkAnswer(answer:string):bool</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>658</x>
+      <y>35</y>
+      <w>665</w>
+      <h>98</h>
+    </coordinates>
+    <panel_attributes>/SignUp/
+-
++createUser(name: string,username: string,password: string,gender: char):int
++signUpValidation(username: string,password: string): bool
++signUpOperationusername: string,password: string,name: string,gender: char,object additionalInfo): bool</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>924</x>
+      <y>231</y>
+      <w>637</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>TeacherSignUp
+-
++SignUpOperation(username: string,password: string,name: string,gender: char,subject: string): bool</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>308</x>
+      <y>231</y>
+      <w>595</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>StudentSignUp
+-
++SignUpOperation(username: string,password: string,name: string,gender: char,level: int): bool</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>630</x>
+      <y>126</y>
+      <w>343</w>
+      <h>119</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>470.0;10.0;10.0;150.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>966</x>
+      <y>126</y>
+      <w>280</w>
+      <h>119</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;380.0;150.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1288</x>
+      <y>588</y>
+      <w>455</w>
+      <h>105</h>
+    </coordinates>
+    <panel_attributes>Login
+-
++createAccount(username:string,password:string):Account (private)
++teacherLogin(Username:string,password:string):Teacher
++studentLogin(Username:string,password:string):Student</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>644</y>
+      <w>336</w>
+      <h>168</h>
+    </coordinates>
+    <panel_attributes>/TeacherServices/
+-
+-teacherId: int
+-
++TeacherSerivces(id: int)
++createExam(numberOfQuestions: int):bool
++deleteExam(examId: int):void
++showStudentResultsOfLevel(level: int):list&lt;Result&gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>329</x>
+      <y>651</y>
+      <w>98</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;120.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>189</x>
+      <y>805</y>
+      <w>805</w>
+      <h>231</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>1130.0;310.0;870.0;310.0;870.0;100.0;10.0;100.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>903</y>
+      <w>336</w>
+      <h>175</h>
+    </coordinates>
+    <panel_attributes>/StudentServices/
+-
+studentId: int
+-
++StudentServices(id: int)
++showAvaliableExams(): List&lt;Exam&gt;
++takeExam(exam: Exam):void
+-showExamsResults(): Dictionary&lt;string,int&gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>329</x>
+      <y>910</y>
+      <w>98</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;120.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>168</x>
+      <y>1036</y>
+      <w>826</w>
+      <h>91</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>1160.0;10.0;1070.0;10.0;1070.0;110.0;10.0;110.0;10.0;60.0</additional_attributes>
+  </element>
+</diagram>
