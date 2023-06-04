@@ -10,6 +10,7 @@ namespace Examsystem
 {
     public class ExamDb:DbContext
     {
+        public static ExamDb db=new ExamDb();
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
             => optionsBuilder.UseLazyLoadingProxies().UseSqlServer("Data Source=.;Initial Catalog=ExamDb;Integrated Security=True;Connect Timeout=30;Encrypt=False;");
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -72,5 +73,6 @@ namespace Examsystem
         public DbSet<Account> accounts { get; set; }
         public DbSet<Teacher> teachers { get; set; }
         public DbSet<Student> students { get; set; }
+        public DbSet<Result>results { get; set; }
     }
 }

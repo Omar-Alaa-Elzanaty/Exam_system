@@ -16,5 +16,13 @@ namespace Examsystem.Models
         public virtual Teacher teacher { get; set; }
         public virtual Student student { get; set; }
         public Account(int id) { }
+
+        public Account(string name, string userName, string password, char gender)
+        {
+            this.name = name;
+            this.userName = userName;
+            this.password = password;
+            this.gender = gender;
+        }
     }
 }

@@ -17,9 +17,6 @@ namespace Examsystem.Models
         public string choicD { get; set; }
         public int? examId { get; set; }
         public virtual Exam exam { get; set; }
-        public bool checkAsnwer(string answer)
-        {
-            throw new NotImplementedException();
-        }
+        public bool checkAsnwer(string answer) => answer == this.answer;
     }
 }

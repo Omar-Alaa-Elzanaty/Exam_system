@@ -15,7 +15,17 @@ namespace Examsystem.Models
         public double result { get; set; }
         public bool updateStudentResult()
         {
-            throw new NotImplementedException();
+            try
+            {
+                ExamDb db = new ExamDb();
+                db.results.Add(this);
+                db.SaveChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
         }
     }
 }
