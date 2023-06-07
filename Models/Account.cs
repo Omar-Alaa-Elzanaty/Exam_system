@@ -13,8 +13,8 @@ namespace Examsystem.Models
         public string userName { get; set; }
         public string password { get; set; }
         public char gender { get; set; }
-        public virtual Teacher teacher { get; set; }
-        public virtual Student student { get; set; }
+        public virtual Teacher? teacher { get; set; }
+        public virtual Student? student { get; set; }
         public Account(int id) { }
 
         public Account(string name, string userName, string password, char gender)

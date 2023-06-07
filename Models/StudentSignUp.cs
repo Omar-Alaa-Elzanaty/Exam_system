@@ -8,9 +8,22 @@ namespace Examsystem.Models
 {
     public class StudentSignUp : SignUp
     {
-        protected override bool signUpOperation(string username, string password, string name, char gender, object additionalInfo)
+        protected override bool signUpOperation(string userName, string password, string name, char gender, object additionalInfo)
         {
-            throw new NotImplementedException();
+            int id = base.createUser(userName, password, name, gender);
+            if (id == -1)
+            {
+                return false;
+            }
+            else
+            {
+                Student student= new Student();
+                student.accId = id;
+                student.level = (int)additionalInfo;
+                ExamDb.db.Add(student);
+                ExamDb.db.SaveChanges();
+                return true;
+            }
         }
     }
 }

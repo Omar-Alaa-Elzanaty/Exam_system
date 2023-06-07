@@ -54,7 +54,7 @@ namespace Examsystem.Migrations
                     b.HasIndex("userName")
                         .IsUnique();
 
-                    b.ToTable("accounts");
+                    b.ToTable("accounts", (string)null);
                 });
 
             modelBuilder.Entity("Examsystem.Models.Exam", b =>
@@ -78,7 +78,7 @@ namespace Examsystem.Migrations
 
                     b.HasIndex("teacherId");
 
-                    b.ToTable("Exam");
+                    b.ToTable("Exam", (string)null);
                 });
 
             modelBuilder.Entity("Examsystem.Models.Question", b =>
@@ -120,7 +120,7 @@ namespace Examsystem.Migrations
 
                     b.HasIndex("examId");
 
-                    b.ToTable("Question");
+                    b.ToTable("Question", (string)null);
                 });
 
             modelBuilder.Entity("Examsystem.Models.Result", b =>
@@ -138,7 +138,7 @@ namespace Examsystem.Migrations
 
                     b.HasIndex("examId");
 
-                    b.ToTable("results");
+                    b.ToTable("results", (string)null);
                 });
 
             modelBuilder.Entity("Examsystem.Models.Student", b =>
@@ -161,7 +161,7 @@ namespace Examsystem.Migrations
                         .IsUnique()
                         .HasFilter("[accId] IS NOT NULL");
 
-                    b.ToTable("students");
+                    b.ToTable("students", (string)null);
                 });
 
             modelBuilder.Entity("Examsystem.Models.Teacher", b =>
@@ -185,7 +185,7 @@ namespace Examsystem.Migrations
                         .IsUnique()
                         .HasFilter("[accId] IS NOT NULL");
 
-                    b.ToTable("teachers");
+                    b.ToTable("teachers", (string)null);
                 });
 
             modelBuilder.Entity("Examsystem.Models.Exam", b =>

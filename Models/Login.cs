@@ -8,17 +8,27 @@ namespace Examsystem.Models
 {
     public static class Login
     {
-        static Account createAccount(string _username,string _password)
+        static Account createAccount(string userName,string password)
         {
-            throw new NotImplementedException();
+            return ExamDb.db.accounts.Where(acc=>acc.userName==userName).FirstOrDefault();
         }
-        public static Teacher teacherLogin(string _username,string _password)
+        public static Teacher teacherLogin(string userName,string password)
         {
-            throw new NotImplementedException();
+            Account user=createAccount(userName,password);
+            if (user != null)
+            {
+                ExamDb.db.Entry(user).Reference(u => u.teacher).Load();
+            }
+            return user.teacher;
         }
-        public static Student studentLogin(string _username,string _password) 
+        public static Student studentLogin(string userName,string password) 
         {
-            throw new NotImplementedException(); 
+            Account user=createAccount(userName,password);
+            if(user != null)
+            {
+                ExamDb.db.Entry(user).Reference(u => u.student).Load();
+            }
+            return user.student;
         }
     }
 }
