@@ -20,7 +20,11 @@ namespace Examsystem.Models
         }
         public Teacher(int accountId):this()
         {
-            throw new NotImplementedException();
+            Teacher person = ExamDb.db.teachers.Find(accountId);
+            if(person != null)
+            {
+                subject = person.subject;
+            }
         }
         
     }

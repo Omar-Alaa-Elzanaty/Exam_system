@@ -1,8 +1,10 @@
-﻿using System;
+﻿using Microsoft.Identity.Client;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace Examsystem.Models
 {
@@ -17,6 +19,12 @@ namespace Examsystem.Models
         {
             base.studentId = studentId;
         }
-        public Student(int aacount) : this() { }
+        public Student(int accountId) : this() {
+            Student person = ExamDb.db.students.Find(accountId);
+            if (person != null)
+            {
+                level = person.level;
+            }
+        }
     }
 }

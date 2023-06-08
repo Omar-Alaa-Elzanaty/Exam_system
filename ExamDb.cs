@@ -25,8 +25,6 @@ namespace Examsystem
                 .HasKey(t => t.teacherId);
             modelBuilder.Entity<Exam>()
                 .HasKey(e => e.examId);
-            modelBuilder.Entity<Exam>()
-                .Property(e => e.teacherId).IsRequired(false);
             modelBuilder.Entity<Question>()
                 .HasKey(q => q.questionId);
             modelBuilder.Entity<Question>()
@@ -74,5 +72,7 @@ namespace Examsystem
         public DbSet<Teacher> teachers { get; set; }
         public DbSet<Student> students { get; set; }
         public DbSet<Result>results { get; set; }
+        public DbSet<Exam>exams { get; set; }
+        public DbSet<Question>questions { get; set; }
     }
 }

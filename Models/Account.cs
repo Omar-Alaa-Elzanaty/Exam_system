@@ -15,7 +15,16 @@ namespace Examsystem.Models
         public char gender { get; set; }
         public virtual Teacher? teacher { get; set; }
         public virtual Student? student { get; set; }
-        public Account(int id) { }
+        public Account(int id) {
+            Account user=ExamDb.db.accounts.Where(a=>a.Id==id).FirstOrDefault();
+            if (user != null)
+            {
+                name = user.name;
+                userName=user.userName;
+                gender = user.gender;
+                password = user.password;
+            }
+        }
 
         public Account(string name, string userName, string password, char gender)
         {
