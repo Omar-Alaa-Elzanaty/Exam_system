@@ -47,7 +47,6 @@ D:\c#\Examsystem\bin\Debug\net6.0-windows\runtimes\win-x86\native\Microsoft.Data
 D:\c#\Examsystem\bin\Debug\net6.0-windows\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 D:\c#\Examsystem\bin\Debug\net6.0-windows\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
 D:\c#\Examsystem\obj\Debug\net6.0-windows\Examsystem.csproj.AssemblyReference.cache
-D:\c#\Examsystem\obj\Debug\net6.0-windows\Examsystem.Form1.resources
 D:\c#\Examsystem\obj\Debug\net6.0-windows\Examsystem.csproj.GenerateResource.cache
 D:\c#\Examsystem\obj\Debug\net6.0-windows\Examsystem.GeneratedMSBuildEditorConfig.editorconfig
 D:\c#\Examsystem\obj\Debug\net6.0-windows\Examsystem.AssemblyInfoInputs.cache
@@ -63,3 +62,8 @@ D:\c#\Examsystem\bin\Debug\net6.0-windows\Castle.Core.dll
 D:\c#\Examsystem\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.Proxies.dll
 D:\c#\Examsystem\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Diagnostics.EventLog.Messages.dll
 D:\c#\Examsystem\obj\Debug\net6.0-windows\Examsystem.Properties.Resources.resources
+D:\c#\Examsystem\obj\Debug\net6.0-windows\Examsystem.StartingPoint.resources
+D:\c#\Examsystem\obj\Debug\net6.0-windows\Examsystem.StudentForm.resources
+D:\c#\Examsystem\obj\Debug\net6.0-windows\Examsystem.ExamForm.resources
+D:\c#\Examsystem\obj\Debug\net6.0-windows\Examsystem.TeacherForm.resources
+D:\c#\Examsystem\obj\Debug\net6.0-windows\Examsystem.ExamCreationForm.resources

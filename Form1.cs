@@ -2,9 +2,9 @@ using Examsystem.Models;
 
 namespace Examsystem
 {
-    public partial class Form1 : Form
+    public partial class StartingPoint : Form
     {
-        public Form1()
+        public StartingPoint()
         {
             InitializeComponent();
         }
@@ -12,6 +12,36 @@ namespace Examsystem
         private void button1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void buttonLogin_Click(object sender, EventArgs e)
+        {
+            Student student = Login.studentLogin(textBoxUsername.Text, textBoxPassword.Text);
+            if (student != null)
+            {
+                this.Visible = false;
+                StudentForm form = new StudentForm(student);
+                form.Visible = true;
+            }
+            else
+            {
+                MessageBox.Show("May be there is a wrong in username or password");
+            }
+        }
+
+        private void buttonTeacher_Click(object sender, EventArgs e)
+        {
+            Teacher teacher=new Teacher(Login.teacherLogin(textBoxUsername.Text,textBoxPassword.Text));
+            if(teacher != null)
+            {
+                this.Visible = false;
+                TeacherForm form = new TeacherForm(teacher);
+                form.Visible = true;
+            }
+            else
+            {
+                MessageBox.Show("May be there is a wrong in username or password");
+            }
         }
     }
 }

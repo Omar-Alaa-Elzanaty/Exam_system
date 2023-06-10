@@ -18,6 +18,15 @@ namespace Examsystem.Models
         {
             base.id = teacherId;
         }
+        public Teacher(Teacher input)
+        {
+            base.id=input.teacherId;
+            teacherId = input.teacherId;
+            subject = input.subject;
+            accId = input.accId;
+            account = input.account;
+            exams = input.exams;
+        }
         public Teacher(int accountId):this()
         {
             Teacher person = ExamDb.db.teachers.Find(accountId);

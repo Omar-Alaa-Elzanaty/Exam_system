@@ -16,7 +16,7 @@ namespace Examsystem.Models
         public virtual List<Question> questions { get; set; }
         public virtual List<Result> results { get; set; }
         public Exam() { }
-        public Exam(int questionsnumber,int teacherId,int grade,int duration,List<Question> questions) {
+        public Exam(int teacherId,int grade,int duration,List<Question> questions) {
             this.teacherId=teacherId;
             this.grade=grade;
             this.durationInMinute=duration;

@@ -16,9 +16,9 @@ namespace Examsystem.Models
         {
             id= teacherId;
         }
-        public bool createExam(int numberOfQuestions,int grade,int durationInMinute,List<Question>questions)
+        public bool createExam(int grade,int durationInMinute,List<Question>questions)
         {
-            Exam exam = new Exam(numberOfQuestions,this.id,grade,durationInMinute,questions);
+            Exam exam = new Exam(this.id,grade,durationInMinute,questions);
             try
             {
                 ExamDb.db.Add(exam);
@@ -44,10 +44,15 @@ namespace Examsystem.Models
             }
             ExamDb.db.SaveChanges();
         }
+        public object showExams()
+        {
+            ExamDb db= new ExamDb();
+            return db.exams.Where(e => e.teacherId == id).ToArray();
+        }
         public object showStudentsResultsOfLevel(int level)
         {
             var resultOfStudent=ExamDb.db.results.Include(i=>i.student.account);
-            return resultOfStudent.Where(r=>r.student.level==level).Select(k=>new {k.student.account.name,k.result });
+            return resultOfStudent.Where(r=>r.student.level==level).Select(k=>new {k.student.account.name,k.result }).ToArray()??null;
         }
     }
 }

@@ -28,7 +28,7 @@ fontsize=20
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>2079</x>
+      <x>2034</x>
       <y>432</y>
       <w>288</w>
       <h>171</h>
@@ -48,7 +48,7 @@ fontsize=20
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>963</x>
+      <x>918</x>
       <y>432</y>
       <w>360</w>
       <h>243</h>
@@ -69,7 +69,7 @@ Account(id: int)</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>963</x>
+      <x>918</x>
       <y>783</y>
       <w>360</w>
       <h>225</h>
@@ -83,14 +83,14 @@ Account(id: int)</panel_attributes>
 -exams:List&lt;Exam&gt;
 -
 +Teacher()
-+Teacher(accountId:int)
++Teacher(teacher: Teacher)
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>963</x>
+      <x>918</x>
       <y>1116</y>
       <w>360</w>
       <h>225</h>
@@ -110,7 +110,7 @@ Account(id: int)</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1611</x>
+      <x>1566</x>
       <y>1071</y>
       <w>612</w>
       <h>243</h>
@@ -131,7 +131,7 @@ results: List&lt;Result&gt;
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1611</x>
+      <x>1566</x>
       <y>423</y>
       <w>378</w>
       <h>225</h>
@@ -150,7 +150,7 @@ results: List&lt;Result&gt;
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1611</x>
+      <x>1566</x>
       <y>711</y>
       <w>378</w>
       <h>324</h>
@@ -173,7 +173,7 @@ results: List&lt;Result&gt;
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1278</x>
+      <x>1233</x>
       <y>0</y>
       <w>855</w>
       <h>126</h>
@@ -188,7 +188,7 @@ results: List&lt;Result&gt;
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1620</x>
+      <x>1575</x>
       <y>252</y>
       <w>819</w>
       <h>99</h>
@@ -201,7 +201,7 @@ results: List&lt;Result&gt;
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>828</x>
+      <x>783</x>
       <y>252</y>
       <w>765</w>
       <h>90</h>
@@ -214,7 +214,7 @@ results: List&lt;Result&gt;
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1242</x>
+      <x>1197</x>
       <y>117</y>
       <w>441</w>
       <h>153</h>
@@ -225,7 +225,7 @@ results: List&lt;Result&gt;
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1674</x>
+      <x>1629</x>
       <y>117</y>
       <w>360</w>
       <h>153</h>
@@ -236,7 +236,7 @@ results: List&lt;Result&gt;
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>2016</x>
+      <x>1971</x>
       <y>729</y>
       <w>585</w>
       <h>135</h>
@@ -251,7 +251,7 @@ results: List&lt;Result&gt;
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>45</x>
+      <x>0</x>
       <y>783</y>
       <w>819</w>
       <h>225</h>
@@ -263,13 +263,14 @@ results: List&lt;Result&gt;
 +TeacherSerivces(id: int)
 +createExam(numberOfQuestions: int,grade: int,durationInMinute: int,questions: List&lt;Question&gt;):bool
 +deleteExam(examId: int):void
++showExams():object
 +showStudentResultsOfLevel(level: int): object</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>855</x>
+      <x>810</x>
       <y>792</y>
       <w>126</w>
       <h>27</h>
@@ -280,7 +281,7 @@ results: List&lt;Result&gt;
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>675</x>
+      <x>630</x>
       <y>999</y>
       <w>954</w>
       <h>270</h>
@@ -291,7 +292,7 @@ results: List&lt;Result&gt;
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>414</x>
+      <x>369</x>
       <y>1116</y>
       <w>450</w>
       <h>234</h>
@@ -301,7 +302,7 @@ results: List&lt;Result&gt;
 studentId: int
 -
 +StudentServices(id: int)
-+showAvaliableExams(level: int): List&lt;Exam&gt;
++showAvaliableExams(level: int): object
 +takeExam(examId: int,result: double):void
 -showExamsResults(): object</panel_attributes>
     <additional_attributes/>
@@ -309,7 +310,7 @@ studentId: int
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>855</x>
+      <x>810</x>
       <y>1125</y>
       <w>126</w>
       <h>27</h>
