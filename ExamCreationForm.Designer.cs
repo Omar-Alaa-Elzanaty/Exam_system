@@ -46,13 +46,14 @@
             label7 = new Label();
             label8 = new Label();
             comboBox2 = new ComboBox();
+            button3 = new Button();
             SuspendLayout();
             // 
             // button1
             // 
             button1.Anchor = AnchorStyles.Left;
             button1.Font = new Font("Segoe UI Semibold", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
-            button1.Location = new Point(667, 415);
+            button1.Location = new Point(667, 383);
             button1.Name = "button1";
             button1.Size = new Size(369, 58);
             button1.TabIndex = 0;
@@ -64,7 +65,7 @@
             // 
             button2.Anchor = AnchorStyles.Bottom;
             button2.Font = new Font("Segoe UI", 21.75F, FontStyle.Bold, GraphicsUnit.Point);
-            button2.Location = new Point(667, 501);
+            button2.Location = new Point(667, 454);
             button2.Name = "button2";
             button2.Size = new Size(369, 58);
             button2.TabIndex = 1;
@@ -217,12 +218,24 @@
             comboBox2.Size = new Size(129, 23);
             comboBox2.TabIndex = 18;
             // 
+            // button3
+            // 
+            button3.Font = new Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
+            button3.Location = new Point(667, 524);
+            button3.Name = "button3";
+            button3.Size = new Size(369, 53);
+            button3.TabIndex = 19;
+            button3.Text = "Back";
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
+            // 
             // ExamCreationForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(255, 128, 0);
             ClientSize = new Size(1091, 589);
+            Controls.Add(button3);
             Controls.Add(comboBox2);
             Controls.Add(label8);
             Controls.Add(label7);
@@ -270,5 +283,6 @@
         private Label label7;
         private Label label8;
         private ComboBox comboBox2;
+        private Button button3;
     }
 }

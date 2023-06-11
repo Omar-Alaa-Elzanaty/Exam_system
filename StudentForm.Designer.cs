@@ -33,6 +33,7 @@
             button2 = new Button();
             SelectedExam = new Button();
             textBox1 = new TextBox();
+            buttonback = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -77,7 +78,7 @@
             // 
             SelectedExam.Anchor = AnchorStyles.Bottom;
             SelectedExam.Font = new Font("Calibri", 24F, FontStyle.Bold, GraphicsUnit.Point);
-            SelectedExam.Location = new Point(598, 491);
+            SelectedExam.Location = new Point(365, 491);
             SelectedExam.Name = "SelectedExam";
             SelectedExam.Size = new Size(299, 61);
             SelectedExam.TabIndex = 3;
@@ -89,12 +90,23 @@
             // 
             textBox1.Anchor = AnchorStyles.Bottom;
             textBox1.Font = new Font("Calibri", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            textBox1.Location = new Point(199, 506);
+            textBox1.Location = new Point(25, 506);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(299, 37);
             textBox1.TabIndex = 4;
             textBox1.Text = "Enter Exam ID";
             textBox1.TextAlign = HorizontalAlignment.Center;
+            // 
+            // buttonback
+            // 
+            buttonback.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            buttonback.Location = new Point(885, 491);
+            buttonback.Name = "buttonback";
+            buttonback.Size = new Size(170, 52);
+            buttonback.TabIndex = 5;
+            buttonback.Text = "Logout";
+            buttonback.UseVisualStyleBackColor = true;
+            buttonback.Click += buttonback_Click;
             // 
             // StudentForm
             // 
@@ -102,6 +114,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(255, 224, 192);
             ClientSize = new Size(1082, 564);
+            Controls.Add(buttonback);
             Controls.Add(textBox1);
             Controls.Add(SelectedExam);
             Controls.Add(button2);
@@ -124,5 +137,6 @@
         private Button button2;
         private Button SelectedExam;
         private TextBox textBox1;
+        private Button buttonback;
     }
 }

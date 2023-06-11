@@ -56,13 +56,21 @@ namespace Examsystem
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if(teacher.createExam(int.Parse(comboBox2.SelectedItem.ToString()), int.Parse(textBoxDuration.Text), questionList)==true)
+            if (teacher.createExam(int.Parse(comboBox2.SelectedItem.ToString()), int.Parse(textBoxDuration.Text), questionList) == true)
             {
                 MessageBox.Show("saved");
-            }else
+            }
+            else
             {
                 MessageBox.Show("Sorry but there is a problem during save the exam");
             }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            TeacherForm teacherForm = new TeacherForm(teacher);
+            teacherForm.Visible = true; ;
         }
     }
 }

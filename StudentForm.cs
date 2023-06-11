@@ -15,6 +15,10 @@ namespace Examsystem
     {
         Student student;
         double result;
+        public StudentForm()
+        {
+            InitializeComponent();
+        }
         public StudentForm(Student student)
         {
             this.student = student;
@@ -39,13 +43,20 @@ namespace Examsystem
         private void SelectedExam_Click(object sender, EventArgs e)
         {
             int x = int.Parse(textBox1.Text);
-            ExamForm form=new ExamForm(student,x);
+            ExamForm form = new ExamForm(student, x);
             form.Visible = true;
         }
 
         private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
         {
 
+        }
+
+        private void buttonback_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            StartingPoint startingPoint = new StartingPoint();
+            startingPoint.Visible = true;
         }
     }
 }

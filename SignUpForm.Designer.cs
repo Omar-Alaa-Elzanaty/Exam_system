@@ -35,13 +35,14 @@
             textBoxName = new TextBox();
             textBoxPassword = new TextBox();
             textBoxUsername = new TextBox();
+            buttonBack = new Button();
             SuspendLayout();
             // 
             // buttonTeacherSignUp
             // 
             buttonTeacherSignUp.Anchor = AnchorStyles.Bottom;
             buttonTeacherSignUp.Font = new Font("Segoe UI Semibold", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
-            buttonTeacherSignUp.Location = new Point(531, 391);
+            buttonTeacherSignUp.Location = new Point(537, 419);
             buttonTeacherSignUp.Name = "buttonTeacherSignUp";
             buttonTeacherSignUp.Size = new Size(266, 52);
             buttonTeacherSignUp.TabIndex = 13;
@@ -53,7 +54,7 @@
             // 
             buttonStudentSignUp.Anchor = AnchorStyles.Bottom;
             buttonStudentSignUp.Font = new Font("Segoe UI Semibold", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
-            buttonStudentSignUp.Location = new Point(133, 391);
+            buttonStudentSignUp.Location = new Point(143, 419);
             buttonStudentSignUp.Name = "buttonStudentSignUp";
             buttonStudentSignUp.Size = new Size(266, 52);
             buttonStudentSignUp.TabIndex = 12;
@@ -116,12 +117,25 @@
             textBoxUsername.Text = "Username";
             textBoxUsername.TextAlign = HorizontalAlignment.Center;
             // 
+            // buttonBack
+            // 
+            buttonBack.Anchor = AnchorStyles.Bottom;
+            buttonBack.Font = new Font("Segoe UI Semibold", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
+            buttonBack.Location = new Point(377, 503);
+            buttonBack.Name = "buttonBack";
+            buttonBack.Size = new Size(172, 43);
+            buttonBack.TabIndex = 14;
+            buttonBack.Text = "Back";
+            buttonBack.UseVisualStyleBackColor = true;
+            buttonBack.Click += buttonBack_Click;
+            // 
             // SignUpForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(255, 128, 0);
-            ClientSize = new Size(930, 485);
+            ClientSize = new Size(930, 570);
+            Controls.Add(buttonBack);
             Controls.Add(buttonTeacherSignUp);
             Controls.Add(buttonStudentSignUp);
             Controls.Add(textBoxAdd);
@@ -146,5 +160,6 @@
         private TextBox textBoxName;
         private TextBox textBoxPassword;
         private TextBox textBoxUsername;
+        private Button buttonBack;
     }
 }

@@ -15,13 +15,13 @@ namespace Examsystem
     public partial class ExamForm : Form
     {
         int exam;
-        Student Student;
+        Student student;
         Dictionary<int, string> studentAnswers = new Dictionary<int, string>();
         public ExamForm(Student student, int examId)
         {
             InitializeComponent();
             this.exam = examId;
-            this.Student = student;
+            this.student = student;
             comboBox1.Items.Add("A");
             comboBox1.Items.Add("B");
             comboBox1.Items.Add("C");
@@ -45,7 +45,7 @@ namespace Examsystem
 
         private void button2_Click(object sender, EventArgs e)
         {
-            ExamDb db= new ExamDb();
+            ExamDb db = new ExamDb();
             var questions = db.questions;
             double result = 0;
             foreach (var answer in studentAnswers)
@@ -57,8 +57,15 @@ namespace Examsystem
                 }
             }
             result = result / questions.Count();
-            Student.takeExam(exam, result);
+            student.takeExam(exam, result);
             this.Close();
+        }
+
+        private void buttonBack_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            StudentForm studentForm = new StudentForm(student);
+            studentForm.Visible = false;
         }
     }
 }

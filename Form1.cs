@@ -50,5 +50,10 @@ namespace Examsystem
             SignUpForm form = new SignUpForm();
             form.Visible = true;
         }
+
+        private void StartingPoint_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

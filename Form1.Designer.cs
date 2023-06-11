@@ -144,6 +144,7 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "EnteringUser";
             WindowState = FormWindowState.Maximized;
+            Load += StartingPoint_Load;
             ResumeLayout(false);
             PerformLayout();
         }

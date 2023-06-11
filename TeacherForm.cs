@@ -54,5 +54,12 @@ namespace Examsystem
             teacher.deleteExam(int.Parse(textBoxExamDeleted.Text));
             dataGridView1.DataSource = null;
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            StartingPoint startingPoint = new StartingPoint();
+            startingPoint.Visible = true;
+        }
     }
 }

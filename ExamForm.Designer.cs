@@ -35,6 +35,7 @@
             comboBox1 = new ComboBox();
             button1 = new Button();
             button2 = new Button();
+            buttonBack = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -114,7 +115,7 @@
             // 
             button2.Anchor = AnchorStyles.Bottom;
             button2.Font = new Font("Segoe UI", 21.75F, FontStyle.Bold, GraphicsUnit.Point);
-            button2.Location = new Point(1091, 563);
+            button2.Location = new Point(1091, 542);
             button2.Name = "button2";
             button2.Size = new Size(178, 48);
             button2.TabIndex = 6;
@@ -123,12 +124,25 @@
             button2.UseWaitCursor = true;
             button2.Click += button2_Click;
             // 
+            // buttonBack
+            // 
+            buttonBack.Font = new Font("Calibri", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
+            buttonBack.Location = new Point(1091, 596);
+            buttonBack.Name = "buttonBack";
+            buttonBack.Size = new Size(178, 50);
+            buttonBack.TabIndex = 7;
+            buttonBack.Text = "Back";
+            buttonBack.UseVisualStyleBackColor = true;
+            buttonBack.UseWaitCursor = true;
+            buttonBack.Click += buttonBack_Click;
+            // 
             // ExamForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(255, 128, 0);
             ClientSize = new Size(1281, 658);
+            Controls.Add(buttonBack);
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(comboBox1);
@@ -156,5 +170,6 @@
         private ComboBox comboBox1;
         private Button button1;
         private Button button2;
+        private Button buttonBack;
     }
 }

@@ -21,7 +21,7 @@ namespace Examsystem
         private void buttonStudentSignUp_Click(object sender, EventArgs e)
         {
             StudentSignUp studentSignUp = new StudentSignUp();
-            bool valid=studentSignUp.signUpOperation(textBoxUsername.Text,
+            bool valid = studentSignUp.signUpOperation(textBoxUsername.Text,
                                           textBoxPassword.Text,
                                           textBoxName.Text,
                                           Convert.ToChar(textBoxGender.Text.ToString())
@@ -40,7 +40,7 @@ namespace Examsystem
         private void buttonTeacherSignUp_Click(object sender, EventArgs e)
         {
             TeacherSignUp teacherSignUp = new TeacherSignUp();
-            bool valid=teacherSignUp.signUpOperation(textBoxUsername.Text,
+            bool valid = teacherSignUp.signUpOperation(textBoxUsername.Text,
                                           textBoxPassword.Text,
                                           textBoxName.Text,
                                           Convert.ToChar(textBoxGender.Text.ToString())
@@ -54,6 +54,15 @@ namespace Examsystem
             {
                 MessageBox.Show("Failed Successfully");
             }
+        }
+
+        private void buttonBack_Click(object sender, EventArgs e)
+        {
+            // this.Visible = false;
+            this.Close();
+            StartingPoint startingPoint = new StartingPoint();
+            startingPoint.Visible = true;
+
         }
     }
 }

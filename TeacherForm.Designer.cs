@@ -35,6 +35,7 @@
             buttonExamCreation = new Button();
             buttonDelete = new Button();
             textBoxExamDeleted = new TextBox();
+            buttonLogout = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -88,7 +89,7 @@
             // 
             buttonExamCreation.Anchor = AnchorStyles.Bottom;
             buttonExamCreation.Font = new Font("Segoe UI Semibold", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
-            buttonExamCreation.Location = new Point(1047, 568);
+            buttonExamCreation.Location = new Point(1047, 488);
             buttonExamCreation.Name = "buttonExamCreation";
             buttonExamCreation.Size = new Size(322, 62);
             buttonExamCreation.TabIndex = 4;
@@ -117,12 +118,24 @@
             textBoxExamDeleted.Size = new Size(175, 39);
             textBoxExamDeleted.TabIndex = 6;
             // 
+            // buttonLogout
+            // 
+            buttonLogout.Font = new Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
+            buttonLogout.Location = new Point(1047, 587);
+            buttonLogout.Name = "buttonLogout";
+            buttonLogout.Size = new Size(322, 56);
+            buttonLogout.TabIndex = 7;
+            buttonLogout.Text = "Logout";
+            buttonLogout.UseVisualStyleBackColor = true;
+            buttonLogout.Click += button1_Click;
+            // 
             // TeacherForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(255, 128, 0);
             ClientSize = new Size(1408, 655);
+            Controls.Add(buttonLogout);
             Controls.Add(textBoxExamDeleted);
             Controls.Add(buttonDelete);
             Controls.Add(buttonExamCreation);
@@ -149,5 +162,6 @@
         private Button buttonExamCreation;
         private Button buttonDelete;
         private TextBox textBoxExamDeleted;
+        private Button buttonLogout;
     }
 }
