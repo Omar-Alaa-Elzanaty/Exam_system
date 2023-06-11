@@ -13,8 +13,9 @@ namespace Examsystem.Models
             if (signUpValidation(userName, password))
             {
                 Account user = new Account(name,userName,password,gender);
-                ExamDb.db.Add(user);
-                ExamDb.db.SaveChanges();
+                ExamDb db = new ExamDb();
+                db.Add(user);
+                db.SaveChanges();
                 return user.Id;
             }
             else
@@ -24,8 +25,9 @@ namespace Examsystem.Models
         }
         protected bool signUpValidation(string userName, string password)
         {
-           var user=ExamDb.db.accounts.Select(a=>a.userName==userName&&a.password==password).ToList();
-            return user != null && user.Count == 1;
+            ExamDb db = new ExamDb();
+            var user=db.accounts.Where(a=>a.userName==userName&&a.password==password).ToList();
+            return user.Count == 0;
         }
         public abstract bool signUpOperation(string username,string password,string name,char gender,object additionalInfo);
     }

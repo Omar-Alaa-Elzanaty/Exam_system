@@ -20,8 +20,9 @@ namespace Examsystem.Models
                 Student student= new Student();
                 student.accId = id;
                 student.level = (int)additionalInfo;
-                ExamDb.db.Add(student);
-                ExamDb.db.SaveChanges();
+                ExamDb db = new ExamDb();
+                db.Add(student);
+                db.SaveChanges();
                 return true;
             }
         }

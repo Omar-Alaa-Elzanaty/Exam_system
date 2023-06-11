@@ -21,7 +21,8 @@ namespace Examsystem.Models
             this.grade=grade;
             this.durationInMinute=duration;
             this.questions = questions;
-            ExamDb.db.Add(this);
+            ExamDb db=new ExamDb();
+            db.Add(this);
         }
     }
 }

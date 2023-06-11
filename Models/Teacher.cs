@@ -29,7 +29,8 @@ namespace Examsystem.Models
         }
         public Teacher(int accountId):this()
         {
-            Teacher person = ExamDb.db.teachers.Find(accountId);
+            ExamDb db = new ExamDb();
+            Teacher person = db.teachers.Find(accountId);
             if(person != null)
             {
                 subject = person.subject;

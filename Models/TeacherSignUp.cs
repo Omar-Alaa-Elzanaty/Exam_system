@@ -20,8 +20,9 @@ namespace Examsystem.Models
                 Teacher teacher = new Teacher();
                 teacher.accId = id;
                 teacher.subject = additionalInfo.ToString();
-                ExamDb.db.Add(teacher);
-                ExamDb.db.SaveChanges();
+                ExamDb db = new ExamDb();
+                db.Add(teacher);
+                db.SaveChanges();
                 return true;
             }
         }

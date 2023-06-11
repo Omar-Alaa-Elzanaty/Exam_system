@@ -73,7 +73,7 @@
             buttonSignUpStudent.Name = "buttonSignUpStudent";
             buttonSignUpStudent.Size = new Size(249, 57);
             buttonSignUpStudent.TabIndex = 2;
-            buttonSignUpStudent.Text = "Signup as Student";
+            buttonSignUpStudent.Text = "Signup";
             buttonSignUpStudent.UseVisualStyleBackColor = true;
             buttonSignUpStudent.Click += buttonSignUp_Click;
             // 

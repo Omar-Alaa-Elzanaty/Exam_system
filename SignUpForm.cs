@@ -30,6 +30,8 @@ namespace Examsystem
             {
                 MessageBox.Show("SignUp successfully");
                 this.Close();
+                StartingPoint startingPoint = new StartingPoint();
+                startingPoint.Visible = true;
             }
             else
             {
@@ -49,6 +51,8 @@ namespace Examsystem
             {
                 MessageBox.Show("SignUp successfully");
                 this.Close();
+                StartingPoint startingPoint = new StartingPoint();
+                startingPoint.Visible = true;
             }
             else
             {

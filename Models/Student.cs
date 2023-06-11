@@ -17,14 +17,15 @@ namespace Examsystem.Models
         public virtual List<Result> results { get; set; }
         public Student()
         {
-            base.studentId = studentId;
+            base.id = studentId;
         }
-        public Student(int accountId) : this() {
-            Student person = ExamDb.db.students.Find(accountId);
-            if (person != null)
-            {
-                level = person.level;
-            }
+        public Student(Student input) {
+            this.id = input.studentId;
+            this.studentId = input.studentId;
+            this.level = input.level;
+            this.accId = input.accId;
+            this.account = input.account;
+            this.results = input.results;
         }
     }
 }

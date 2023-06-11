@@ -19,6 +19,7 @@ namespace Examsystem
             Student student = Login.studentLogin(textBoxUsername.Text, textBoxPassword.Text);
             if (student != null)
             {
+                student=new Student(student);
                 this.Visible = false;
                 StudentForm form = new StudentForm(student);
                 form.Visible = true;
@@ -31,9 +32,10 @@ namespace Examsystem
 
         private void buttonTeacher_Click(object sender, EventArgs e)
         {
-            Teacher teacher = new Teacher(Login.teacherLogin(textBoxUsername.Text, textBoxPassword.Text));
+            Teacher teacher = Login.teacherLogin(textBoxUsername.Text, textBoxPassword.Text);
             if (teacher != null)
             {
+                teacher=new Teacher(teacher);
                 this.Visible = false;
                 TeacherForm form = new TeacherForm(teacher);
                 form.Visible = true;

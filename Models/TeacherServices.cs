@@ -19,10 +19,11 @@ namespace Examsystem.Models
         public bool createExam(int grade,int durationInMinute,List<Question>questions)
         {
             Exam exam = new Exam(this.id,grade,durationInMinute,questions);
+            ExamDb db = new ExamDb();
             try
             {
-                ExamDb.db.Add(exam);
-                ExamDb.db.SaveChanges();
+                db.Add(exam);
+                db.SaveChanges();
                 return true;
             }
             catch
@@ -32,23 +33,24 @@ namespace Examsystem.Models
         }
         public void deleteExam(int examId)
         {
-            Exam exam = ExamDb.db.exams.Find(examId);
-            var questions = ExamDb.db.questions.Where(q => q.examId == examId).ToList();
-            var results=ExamDb.db.results.Where(r=>r.examId==examId).ToList();
+            ExamDb db = new ExamDb();
+            Exam exam = db.exams.Find(examId);
+            var questions = db.questions.Where(q => q.examId == examId).ToList();
+            var results=db.results.Where(r=>r.examId==examId).ToList();
             if (questions != null)
             {
-                ExamDb.db.questions.RemoveRange(questions);
+                db.questions.RemoveRange(questions);
             }
             if (results != null)
             {
-                ExamDb.db.results.RemoveRange(results);
+                db.results.RemoveRange(results);
             }
             
             if (exam != null)
             {
-                ExamDb.db.exams.Remove(exam);
+                db.exams.Remove(exam);
             }
-            ExamDb.db.SaveChanges();
+            db.SaveChanges();
         }
         public object showExams()
         {
@@ -57,7 +59,8 @@ namespace Examsystem.Models
         }
         public object showStudentsResultsOfLevel(int level)
         {
-            var resultOfStudent=ExamDb.db.results.Include(i=>i.student.account);
+            ExamDb db = new ExamDb();
+            var resultOfStudent=db.results.Include(i=>i.student.account);
             return resultOfStudent.Where(r=>r.student.level==level).Select(k=>new {k.student.account.name,k.result }).ToArray()??null;
         }
     }
