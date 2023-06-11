@@ -31,8 +31,8 @@ namespace Examsystem
 
         private void buttonTeacher_Click(object sender, EventArgs e)
         {
-            Teacher teacher=new Teacher(Login.teacherLogin(textBoxUsername.Text,textBoxPassword.Text));
-            if(teacher != null)
+            Teacher teacher = new Teacher(Login.teacherLogin(textBoxUsername.Text, textBoxPassword.Text));
+            if (teacher != null)
             {
                 this.Visible = false;
                 TeacherForm form = new TeacherForm(teacher);
@@ -42,6 +42,13 @@ namespace Examsystem
             {
                 MessageBox.Show("May be there is a wrong in username or password");
             }
+        }
+
+        private void buttonSignUp_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            SignUpForm form = new SignUpForm();
+            form.Visible = true;
         }
     }
 }

@@ -27,6 +27,6 @@ namespace Examsystem.Models
            var user=ExamDb.db.accounts.Select(a=>a.userName==userName&&a.password==password).ToList();
             return user != null && user.Count == 1;
         }
-        protected abstract bool signUpOperation(string username,string password,string name,char gender,object additionalInfo);
+        public abstract bool signUpOperation(string username,string password,string name,char gender,object additionalInfo);
     }
 }

@@ -17,7 +17,7 @@ namespace Examsystem
         public TeacherForm(Teacher teacher)
         {
             InitializeComponent();
-            this.teacher =new Teacher(teacher);
+            this.teacher = new Teacher(teacher);
             comboBox1.Items.Add(1);
             comboBox1.Items.Add(2);
             comboBox1.Items.Add(3);
@@ -38,6 +38,8 @@ namespace Examsystem
         private void buttonShowExam_Click(object sender, EventArgs e)
         {
             dataGridView1.DataSource = teacher.showExams();
+            dataGridView1.Columns["teacher"].Visible = false;
+            dataGridView1.Columns["teacherId"].Visible = false;
         }
 
         private void buttonExamCreation_Click(object sender, EventArgs e)
@@ -45,6 +47,12 @@ namespace Examsystem
             this.Visible = false;
             ExamCreationForm form = new ExamCreationForm(teacher);
             form.Visible = true;
+        }
+
+        private void buttonDelete_Click(object sender, EventArgs e)
+        {
+            teacher.deleteExam(int.Parse(textBoxExamDeleted.Text));
+            dataGridView1.DataSource = null;
         }
     }
 }

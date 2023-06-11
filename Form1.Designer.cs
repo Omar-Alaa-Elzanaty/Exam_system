@@ -30,7 +30,7 @@
         {
             buttonStudent = new Button();
             label1 = new Label();
-            buttonSignUp = new Button();
+            buttonSignUpStudent = new Button();
             textBoxPassword = new TextBox();
             textBoxUsername = new TextBox();
             label2 = new Label();
@@ -63,18 +63,19 @@
             label1.TabIndex = 1;
             label1.Text = "Has no account ?";
             // 
-            // buttonSignUp
+            // buttonSignUpStudent
             // 
-            buttonSignUp.Anchor = AnchorStyles.Bottom;
-            buttonSignUp.Font = new Font("Calibri", 21.75F, FontStyle.Bold, GraphicsUnit.Point);
-            buttonSignUp.ForeColor = Color.DarkRed;
-            buttonSignUp.ImageAlign = ContentAlignment.BottomCenter;
-            buttonSignUp.Location = new Point(528, 554);
-            buttonSignUp.Name = "buttonSignUp";
-            buttonSignUp.Size = new Size(249, 57);
-            buttonSignUp.TabIndex = 2;
-            buttonSignUp.Text = "Sign UP";
-            buttonSignUp.UseVisualStyleBackColor = true;
+            buttonSignUpStudent.Anchor = AnchorStyles.Bottom;
+            buttonSignUpStudent.Font = new Font("Calibri", 21.75F, FontStyle.Bold, GraphicsUnit.Point);
+            buttonSignUpStudent.ForeColor = Color.DarkRed;
+            buttonSignUpStudent.ImageAlign = ContentAlignment.BottomCenter;
+            buttonSignUpStudent.Location = new Point(528, 554);
+            buttonSignUpStudent.Name = "buttonSignUpStudent";
+            buttonSignUpStudent.Size = new Size(249, 57);
+            buttonSignUpStudent.TabIndex = 2;
+            buttonSignUpStudent.Text = "Signup as Student";
+            buttonSignUpStudent.UseVisualStyleBackColor = true;
+            buttonSignUpStudent.Click += buttonSignUp_Click;
             // 
             // textBoxPassword
             // 
@@ -136,7 +137,7 @@
             Controls.Add(label2);
             Controls.Add(textBoxUsername);
             Controls.Add(textBoxPassword);
-            Controls.Add(buttonSignUp);
+            Controls.Add(buttonSignUpStudent);
             Controls.Add(label1);
             Controls.Add(buttonStudent);
             Name = "StartingPoint";
@@ -151,7 +152,7 @@
 
         private Button buttonStudent;
         private Label label1;
-        private Button buttonSignUp;
+        private Button buttonSignUpStudent;
         private TextBox textBoxPassword;
         private TextBox textBoxUsername;
         private Label label2;

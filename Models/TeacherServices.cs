@@ -34,10 +34,16 @@ namespace Examsystem.Models
         {
             Exam exam = ExamDb.db.exams.Find(examId);
             var questions = ExamDb.db.questions.Where(q => q.examId == examId).ToList();
+            var results=ExamDb.db.results.Where(r=>r.examId==examId).ToList();
             if (questions != null)
             {
                 ExamDb.db.questions.RemoveRange(questions);
             }
+            if (results != null)
+            {
+                ExamDb.db.results.RemoveRange(results);
+            }
+            
             if (exam != null)
             {
                 ExamDb.db.exams.Remove(exam);

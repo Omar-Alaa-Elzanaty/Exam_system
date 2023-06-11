@@ -8,7 +8,7 @@ namespace Examsystem.Models
 {
     public class StudentSignUp : SignUp
     {
-        protected override bool signUpOperation(string userName, string password, string name, char gender, object additionalInfo)
+        public override bool signUpOperation(string userName, string password, string name, char gender, object additionalInfo)
         {
             int id = base.createUser(userName, password, name, gender);
             if (id == -1)

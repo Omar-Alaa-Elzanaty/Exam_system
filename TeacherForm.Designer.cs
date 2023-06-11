@@ -33,6 +33,8 @@
             buttonShowExam = new Button();
             comboBox1 = new ComboBox();
             buttonExamCreation = new Button();
+            buttonDelete = new Button();
+            textBoxExamDeleted = new TextBox();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -62,11 +64,11 @@
             // 
             // buttonShowExam
             // 
-            buttonShowExam.Anchor = AnchorStyles.Right;
+            buttonShowExam.Anchor = AnchorStyles.Bottom;
             buttonShowExam.Font = new Font("Segoe UI Semibold", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
-            buttonShowExam.Location = new Point(852, 424);
+            buttonShowExam.Location = new Point(1047, 418);
             buttonShowExam.Name = "buttonShowExam";
-            buttonShowExam.Size = new Size(303, 46);
+            buttonShowExam.Size = new Size(322, 55);
             buttonShowExam.TabIndex = 2;
             buttonShowExam.Text = "Show your exams";
             buttonShowExam.UseVisualStyleBackColor = true;
@@ -86,13 +88,34 @@
             // 
             buttonExamCreation.Anchor = AnchorStyles.Bottom;
             buttonExamCreation.Font = new Font("Segoe UI Semibold", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
-            buttonExamCreation.Location = new Point(512, 564);
+            buttonExamCreation.Location = new Point(1047, 568);
             buttonExamCreation.Name = "buttonExamCreation";
-            buttonExamCreation.Size = new Size(228, 62);
+            buttonExamCreation.Size = new Size(322, 62);
             buttonExamCreation.TabIndex = 4;
             buttonExamCreation.Text = "Create Exam";
             buttonExamCreation.UseVisualStyleBackColor = true;
             buttonExamCreation.Click += buttonExamCreation_Click;
+            // 
+            // buttonDelete
+            // 
+            buttonDelete.Anchor = AnchorStyles.Right;
+            buttonDelete.Font = new Font("Segoe UI Semibold", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
+            buttonDelete.Location = new Point(270, 568);
+            buttonDelete.Name = "buttonDelete";
+            buttonDelete.Size = new Size(322, 62);
+            buttonDelete.TabIndex = 5;
+            buttonDelete.Text = "Delete Exam";
+            buttonDelete.UseVisualStyleBackColor = true;
+            buttonDelete.Click += buttonDelete_Click;
+            // 
+            // textBoxExamDeleted
+            // 
+            textBoxExamDeleted.Anchor = AnchorStyles.Right;
+            textBoxExamDeleted.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            textBoxExamDeleted.Location = new Point(42, 568);
+            textBoxExamDeleted.Name = "textBoxExamDeleted";
+            textBoxExamDeleted.Size = new Size(175, 39);
+            textBoxExamDeleted.TabIndex = 6;
             // 
             // TeacherForm
             // 
@@ -100,6 +123,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(255, 128, 0);
             ClientSize = new Size(1408, 655);
+            Controls.Add(textBoxExamDeleted);
+            Controls.Add(buttonDelete);
             Controls.Add(buttonExamCreation);
             Controls.Add(comboBox1);
             Controls.Add(buttonShowExam);
@@ -112,6 +137,7 @@
             Load += TeacherForm_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -121,5 +147,7 @@
         private Button buttonShowExam;
         private ComboBox comboBox1;
         private Button buttonExamCreation;
+        private Button buttonDelete;
+        private TextBox textBoxExamDeleted;
     }
 }

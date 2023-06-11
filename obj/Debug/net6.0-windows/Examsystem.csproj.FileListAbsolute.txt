@@ -67,3 +67,4 @@ D:\c#\Examsystem\obj\Debug\net6.0-windows\Examsystem.StudentForm.resources
 D:\c#\Examsystem\obj\Debug\net6.0-windows\Examsystem.ExamForm.resources
 D:\c#\Examsystem\obj\Debug\net6.0-windows\Examsystem.TeacherForm.resources
 D:\c#\Examsystem\obj\Debug\net6.0-windows\Examsystem.ExamCreationForm.resources
+D:\c#\Examsystem\obj\Debug\net6.0-windows\Examsystem.SignUpForm.resources
