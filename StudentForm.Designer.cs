@@ -99,6 +99,7 @@
             // 
             // buttonback
             // 
+            buttonback.Anchor = AnchorStyles.Bottom;
             buttonback.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold, GraphicsUnit.Point);
             buttonback.Location = new Point(885, 491);
             buttonback.Name = "buttonback";

@@ -18,6 +18,7 @@ namespace Examsystem
                 .HasKey(a => a.Id);
             modelBuilder.Entity<Account>()
                 .HasIndex(a => a.userName).IsUnique();
+            modelBuilder.Entity<Account>(a => a.HasCheckConstraint("gender", "gender in ('m','M','f','F')"));
             modelBuilder.Entity<Student>()
                 .HasKey(s => s.studentId);
             modelBuilder.Entity<Teacher>()

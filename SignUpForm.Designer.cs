@@ -36,6 +36,7 @@
             textBoxPassword = new TextBox();
             textBoxUsername = new TextBox();
             buttonBack = new Button();
+            label1 = new Label();
             SuspendLayout();
             // 
             // buttonTeacherSignUp
@@ -81,7 +82,7 @@
             textBoxGender.Name = "textBoxGender";
             textBoxGender.Size = new Size(330, 39);
             textBoxGender.TabIndex = 10;
-            textBoxGender.Text = "Gender";
+            textBoxGender.Text = "Gender ( M / F )";
             textBoxGender.TextAlign = HorizontalAlignment.Center;
             // 
             // textBoxName
@@ -129,12 +130,24 @@
             buttonBack.UseVisualStyleBackColor = true;
             buttonBack.Click += buttonBack_Click;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Calibri", 12F, FontStyle.Italic, GraphicsUnit.Point);
+            label1.ForeColor = Color.Blue;
+            label1.Location = new Point(287, 364);
+            label1.Name = "label1";
+            label1.Size = new Size(376, 19);
+            label1.TabIndex = 15;
+            label1.Text = "For student add grade numeric / For teacher add subject ";
+            // 
             // SignUpForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(255, 128, 0);
             ClientSize = new Size(930, 570);
+            Controls.Add(label1);
             Controls.Add(buttonBack);
             Controls.Add(buttonTeacherSignUp);
             Controls.Add(buttonStudentSignUp);
@@ -161,5 +174,6 @@
         private TextBox textBoxPassword;
         private TextBox textBoxUsername;
         private Button buttonBack;
+        private Label label1;
     }
 }
