@@ -60,8 +60,8 @@ namespace Examsystem.Models
         public object showStudentsResultsOfLevel(int level)
         {
             ExamDb db = new ExamDb();
-            var resultOfStudent=db.results.Include(i=>i.student.account);
-            return resultOfStudent.Where(r=>r.student.level==level).Select(k=>new {k.student.account.name,k.result }).ToArray()??null;
+            var resultOfStudent=db.results.Include(i=>i.student.account).Include(i=>i.exam);
+            return resultOfStudent.Where(r=>r.student.level==level&&r.exam.teacherId==id).Select(k=>new {k.student.account.name,k.result }).ToArray()??null;
         }
     }
 }

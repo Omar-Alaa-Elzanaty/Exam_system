@@ -17,7 +17,7 @@ namespace Examsystem.Models
             ExamDb db= new ExamDb();
             var AvilableExams = (from e in db.exams
                         join t in db.teachers on e.teacherId equals t.teacherId
-                        where !db.results.Any(r => r.examId == e.examId && r.sId != id) && e.grade==level
+                        where db.results.Any(r => r.examId == e.examId && r.sId != id) && e.grade==level
                         select new
                         {
                             e.examId,
@@ -29,7 +29,7 @@ namespace Examsystem.Models
         public void takeExam(int examId,double result)
         {
             ExamDb db = new ExamDb();
-            Result studentResult = new Result() { examId = examId, result = result };
+            Result studentResult = new Result() {sId=id, examId = examId, result = result };
            db.Add(studentResult);
            db.SaveChanges();
         }
