@@ -20,7 +20,7 @@ The exam system is a Windows form application that helps any educational organiz
 - Entity Framework
 - Linq
 - MSSql
-- UML TOOL ([UMLet]([url](https://www.umlet.com/)))
+- UML TOOL ([UML](https://www.umlet.com/))
 # System Design
 ## Class uml:
 
