@@ -26,6 +26,9 @@ The exam system is a Windows form application that helps any educational organiz
 
 ![signup](https://github.com/Omar-Alaa-Elzanaty/Exam_system/assets/94639386/57e0a76b-fb96-448b-adfe-51cd8648159c)
 
+![Models](https://github.com/Omar-Alaa-Elzanaty/Exam_system/assets/94639386/01642bea-b87b-4d7d-850d-746bc22ceb25)
+
+
 ![BasicsClass](https://github.com/Omar-Alaa-Elzanaty/Exam_system/assets/94639386/034424de-2e4e-4ee6-ba2a-67acc504694b)
 
 ## Database Diagram:
