@@ -1,3 +1,37 @@
 # Exam_system
-![signup](https://github.com/Omar-Alaa-Elzanaty/Exam_system/assets/94639386/3619af98-b583-4dc8-ac17-9eae5b3adf12)
-![Models](https://github.com/Omar-Alaa-Elzanaty/Exam_system/assets/94639386/6efa9451-4eb1-4411-ab25-6e582bb8855c)
+
+##Summary
+. The exam system is a Windows form application that helps any educational organization to put exams for its students by letting teachers and instructors put their exams and test their students.
+## Requires:
+* Net 6
+* Entity framework
+* MMSql server
+
+##Featured
++ Teacher can :
+  - set exam 
+  - Delete exam
+  - show his students results
++ Student can :
+  - take Exam
+  - show his results
++ No student can take any exam twice
++ Only exams considered for specific level appear to student with the same level
+
+## Used Technologies:
+- Entity Framework
+- Linq
+- MSSql
+- UML TOOL ([UMLet](url))
+##System Design
+### Class uml:
+
+![signup](https://github.com/Omar-Alaa-Elzanaty/Exam_system/assets/94639386/57e0a76b-fb96-448b-adfe-51cd8648159c)
+
+![BasicsClass](https://github.com/Omar-Alaa-Elzanaty/Exam_system/assets/94639386/034424de-2e4e-4ee6-ba2a-67acc504694b)
+
+### Database Diagram:
+
+![DbDigram](https://github.com/Omar-Alaa-Elzanaty/Exam_system/assets/94639386/4155a0a2-3d0d-4624-bc99-5cc79a158e6a)
+
+
