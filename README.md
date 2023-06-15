@@ -37,4 +37,4 @@ The exam system is a Windows form application that helps any educational organiz
 
 ## Demo:
 
-[Video Link]([url](https://drive.google.com/file/d/1cb4NDxGCdCYtImgrv7xVIepYTC0amX3u/view?usp=sharing)https://drive.google.com/file/d/1cb4NDxGCdCYtImgrv7xVIepYTC0amX3u/view?usp=sharing)
+[Demo](https://drive.google.com/file/d/1cb4NDxGCdCYtImgrv7xVIepYTC0amX3u/view?usp=sharing)https://drive.google.com/file/d/1cb4NDxGCdCYtImgrv7xVIepYTC0amX3u/view?usp=sharing)
