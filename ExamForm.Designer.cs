@@ -126,6 +126,7 @@
             // 
             // buttonBack
             // 
+            buttonBack.Anchor = AnchorStyles.Bottom;
             buttonBack.Font = new Font("Calibri", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
             buttonBack.Location = new Point(1091, 596);
             buttonBack.Name = "buttonBack";

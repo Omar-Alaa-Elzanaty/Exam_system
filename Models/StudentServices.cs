@@ -17,7 +17,7 @@ namespace Examsystem.Models
             ExamDb db= new ExamDb();
             var AvilableExams = (from e in db.exams
                         join t in db.teachers on e.teacherId equals t.teacherId
-                        where db.results.Any(r => r.examId == e.examId && r.sId != id) && e.grade==level
+                        where  db.results.Where(r=>r.examId==e.examId&&r.sId==id).Count()==0&&e.grade==level
                         select new
                         {
                             e.examId,
