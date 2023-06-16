@@ -5,7 +5,7 @@ The exam system is a Windows form application that helps any educational organiz
 * Entity framework
 * MMSql server
 
-#Featured
+# Featured
 + Teacher can :
   - set exam 
   - Delete exam
