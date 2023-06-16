@@ -3,7 +3,7 @@ The exam system is a Windows form application that helps any educational organiz
 # Requires:
 * Net 6
 * Entity framework
-* MMSql server
+* MSql server
 
 # Featured
 + Teacher can :
