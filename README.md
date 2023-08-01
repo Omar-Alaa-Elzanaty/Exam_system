@@ -1,5 +1,5 @@
 # Exam_system
-The exam system is a Windows form application that helps any educational organisation put exams together by letting teachers and instructors put their exams together and test their students.
+The exam system is a Windows form application that helps any educational organization put exams by letting teachers and instructors put their exams and test their students.
 # Requires:
 * Net 6
 * MSql server
